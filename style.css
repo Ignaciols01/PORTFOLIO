@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: linear-gradient(180deg, #DC2438, #33292A);
+  background-attachment: fixed;
+  background-size: 100% 200%;
+  animation: scrollColorChange linear;
+  animation-timeline: scroll();
+  margin: 0;
+}
+
+/* Header */
+.header {
+  background-color: #DC2438;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background-color: #f2f2f2;
+  color: #33292A;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Sección Portfolio */
+.portfolio {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.portfolio h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.item {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4 / 3; /* mantiene proporción uniforme */
+  background-color: #5a3c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Las imágenes dentro de los items */
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #DC2438;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+/* Animación scroll */
+@keyframes scrollColorChange {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}

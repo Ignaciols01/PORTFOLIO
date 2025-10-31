@@ -1,60 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Ignacio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo de Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <header class="header">
-    <div class="logo">
-  <img src="img/logo/logo.png" alt="Logo Ignacio">
-</div>
+    <header class="header">
+       <a href="index.html"> <img src="img/logo/logo.png" alt="Logotipo" class="header__logo"></a>
+        
+        <nav class="header__nav">
+            <a href="index.html" class="nav-button">INICIO</a>
+            <a href="#" class="nav-button">TRABAJOS</a>
+            <a href="#" class="nav-button">CATEGORIAS</a>
+        </nav>
+        <div class="header__mobile-menu"></div>
+    </header>
 
-    <nav class="nav">
-      <a href="#" class="nav-btn">Inicio</a>
-      <a href="#" class="nav-btn">Trabajos</a>
-      <a href="#" class="nav-btn">Categorías</a>
-    </nav>
-  </header>
+    <main class="main-content">
+        <h2 class="main-content__title">PORTFOLIO</h2>
 
-  <!-- Contenido principal -->
-  <main class="portfolio">
-    <h2>PORTFOLIO</h2>
-    <div class="grid">
-      <div class="item">
-        <a href="https://www.figma.com/design/E28PV6h8li9cWayw3lSYal/Portafolio?node-id=0-1&p=f"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx28mg8aQ39CEGURVztotd5VC0bO7Ik-ZpBw&s" alt=""></a>
-      </div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div> 
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-    </div>
-  </main>
+        <div class="portfolio-grid">
+            <a href="https://ignaciols01.github.io/PORTFOLIO/"><div class="portfolio-item"><img src="img/img-main/figma logo.png" alt="" class="portfolio-img"></div></a>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+            <div class="portfolio-item"></div>
+        </div>
+    </main>
 
-  <!-- Pie de página -->
-  <footer class="footer">
-    <p>ignacio@copyright</p>
-  </footer>
+    <footer class="footer">
+        <p>ignacio@copyright</p>
+    </footer>
 
-
-
-
-  
 </body>
-
-
 </html>

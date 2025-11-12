@@ -1,4 +1,4 @@
-/* --- Variables CSS --- */
+/* --- Variables CSS (Las que me has pasado) --- */
 :root {
     --color-fondo-body: rgb(165, 165, 225);
     --color-fondo-columna: rgb(255, 255, 255);
@@ -29,9 +29,10 @@ body {
     color: #333;
     margin-bottom: 16px;
 
-
     /* --- CAMBIO PARA CENTRAR --- */
+    /* Ancho máximo para alinearse con el tablero */
     max-width: 940px; 
+    /* Centra el bloque del título */
     margin-left: auto;
     margin-right: auto;
 }
@@ -39,7 +40,12 @@ body {
 /* --- Contenedor Principal (Centrado) --- */
 #div-padre {
     display: flex;
-    gap: 16px;
+    gap: 16px; 
+
+    /* --- CAMBIO PARA CENTRAR --- */
+    /* Quita el margen izquierdo */
+    /* margin-left: 60px; */ 
+    /* Centra las columnas (flex items) */
     justify-content: center;
 }
 
@@ -47,11 +53,11 @@ body {
 .columna-kanban {
     width: 30%;
     max-width: 300px; 
-    background-color: var(--color-fondo-columna); 
+    background-color: var(--color-fondo-columna); /* Usa tu variable */
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgb(210, 210, 210);
-    box-shadow: var(--sombra-tarjeta); 
+    border: 1px solid rgb(210, 210, 210); /* Borde de la imagen */
+    box-shadow: var(--sombra-tarjeta); /* Usa tu variable */
     
     display: flex;
     flex-direction: column;
@@ -60,7 +66,7 @@ body {
 
 /* --- Títulos de Columna --- */
 .div-secciones-t {
-    background-color: var(--color-fondo-titulo); 
+    background-color: var(--color-fondo-titulo); /* Usa tu variable */
     padding: 12px;
     border-radius: 12px;
     text-align: left;
@@ -76,7 +82,7 @@ body {
     border: 1px solid rgb(200, 200, 200); /* Borde de la imagen */
     border-radius: 12px;
     background-color: white;
-    box-shadow: var(--sombra-tarjeta); 
+    box-shadow: var(--sombra-tarjeta); /* Usa tu variable */
     position: relative;
     cursor: grab;
     transition: background-color 0.3s ease;
@@ -98,7 +104,7 @@ body {
 }
 
 
-/* --- Botón Eliminar --- */
+/* --- Botón Eliminar (tu icon-x) --- */
 .icon-x {
     display: block;
     position: absolute;
@@ -174,7 +180,7 @@ body {
 /* --- Botón Añadir Tarjeta (Azul) --- */
 .button-tarjeta {
     color: white;
-    background-color: var(--color-boton-add);
+    background-color: var(--color-boton-add); /* Usa tu variable */
     padding: 8px 12px;
     border: none;
     border-radius: 6px;
@@ -185,7 +191,7 @@ body {
 }
 
 .button-tarjeta:hover {
-    background-color: var(--color-boton-add-hover);
+    background-color: var(--color-boton-add-hover); /* Usa tu variable */
 }
 
 /* --- Icono 'X' del formulario --- */

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 /* =========================================
- Criterio 3: Uso de variables CSS
+CSS
 =========================================
 */
 :root {
@@ -113,7 +112,6 @@ body {
 .main-content {
     padding: 1.5rem; 
     
-    /* CAMBIO: Reducido para más márgenes laterales */
     max-width: 1200px; 
     
     margin: 0 auto;
@@ -128,14 +126,12 @@ body {
     margin-bottom: 1rem;
     text-transform: uppercase;
     
-    /* CAMBIO: Más espacio entre letras */
     letter-spacing: 4px;
 }
 
 .portfolio-grid {
     display: grid;
     
-    /* CAMBIO: Más separación entre items */
     gap: 3.5rem; 
     
     grid-template-columns: repeat(3, 1fr);
@@ -148,11 +144,9 @@ body {
 .portfolio-item {
     background-color: var(--color-acento);
     
-    /* CAMBIO: Divs más chicos (altura reducida) */
+
     height: 120px; 
     overflow: hidden;
-    
-    /* (También te recomiendo añadir esto de la guía) */
     border-radius: 12px;
     
 }
@@ -186,7 +180,7 @@ body {
 
 
 /* =========================================
- Criterio 2: Diseño Responsive (AJUSTES PARA MÓVIL)
+AJUSTES PARA MÓVIL
 =========================================
 */
 @media (max-width: 768px) {
@@ -248,255 +242,4 @@ body {
         padding: 1rem;
         font-size: 14px;
     }
-=======
-/* =========================================
- Criterio 3: Uso de variables CSS
-=========================================
-*/
-:root {
-    /* Colores de la guía */
-    --color-primario: #F0F0F0;
-    --color-secundario: #DC2438;
-    --color-acento: #5C3D40;
-    --color-negro: #33292A;
-    --color-blanco: #FFFFFF;
-
-    /* Tipografía (Usando Arial como fuente principal) */
-    --font-heading: Arial, sans-serif;
-    --font-body: Arial, sans-serif;
-
-    --size-h1: 40px;
-    --size-h2: 32px;
-    --size-p: 20px;
-    --size-label: 20px;
-}
-
-/* =========================================
- Reseteo básico y estilos generales del Body
-=========================================
-*/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-body);
-    background-color: var(--color-primario);
-    color: var(--color-negro);
-    font-size: var(--size-p);
-    
-    overflow-x: hidden; 
-    overflow-y: hidden; 
-    
-    padding-bottom: 80px; 
-    padding-top: 80px; 
-}
-
-/* =========================================
- Encabezado (Header)
-=========================================
-*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--color-secundario);
-    color: var(--color-negro);
-    
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10; 
-}
-
-.header__logo {
-    height: 60px; 
-    width: auto;
-}
-
-.header__nav {
-    display: flex;
-    gap: 10rem;
-}
-
-/* =========================================
- ESTILOS DE BOTONES
-=========================================
-*/
-.nav-button {
-    padding: 0.2rem 4.5rem; 
-    text-decoration: none;
-    font-family: var(--font-body);
-    font-size: 16px;
-    border-radius: 8px; 
-    letter-spacing: 8px;
-    text-transform: uppercase; 
-    background-color: var(--color-primario);
-    color: var(--color-negro);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: var(--color-acento);
-    color: var(--color-primario);
-}
-
-.nav-button:active {
-    background-color: var(--color-negro);
-    color: var(--color-primario);
-}
-
-.header__mobile-menu {
-    display: none;
-}
-
-
-/* =========================================
- Contenido Principal (Main)
-=========================================
-*/
-.main-content {
-    padding: 1.5rem; 
-    
-    /* CAMBIO: Reducido para más márgenes laterales */
-    max-width: 1200px; 
-    
-    margin: 0 auto;
-}
-
-.main-content__title {
-    font-family: var(--font-heading);
-    font-size: var(--size-label);
-    color: var(--color-negro);
-    text-align: center;
-    margin-top: 36px;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    
-    /* CAMBIO: Más espacio entre letras */
-    letter-spacing: 4px;
-}
-
-.portfolio-grid {
-    display: grid;
-    
-    /* CAMBIO: Más separación entre items */
-    gap: 3.5rem; 
-    
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* =========================================
- ESTILO DE RECTÁNGULOS
-=========================================
-*/
-.portfolio-item {
-    background-color: var(--color-acento);
-    
-    /* CAMBIO: Divs más chicos (altura reducida) */
-    height: 120px; 
-    overflow: hidden;
-    
-    /* (También te recomiendo añadir esto de la guía) */
-    border-radius: 12px;
-    
-}
-
-
-
-.portfolio-img{
-  width: 280px;
-  margin-left: 24px;
-}
-
-/* =========================================
- Pie de página (Footer)
-=========================================
-*/
-.footer {
-    padding: 1.5rem;
-    background-color: var(--color-secundario);
-    color: var(--color-primario);
-    text-align: center;
-    font-family: var(--font-body);
-    font-size: var(--size-label);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-
-/* =========================================
- Criterio 2: Diseño Responsive (AJUSTES PARA MÓVIL)
-=========================================
-*/
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px; 
-        padding-bottom: 80px; 
-    }
-    
-    .header {
-        padding: 0.75rem 0.5rem;
-        flex-wrap: wrap; 
-    }
-
-    .header__logo {
-        height: 30px;
-    }
-
-    .header__nav {
-        display: flex;
-        flex-grow: 1; 
-        justify-content: flex-end; 
-        gap: 0.2rem; 
-        margin-left: 0.5rem; 
-    }
-
-    .header__mobile-menu {
-        display: none;
-    }
-
-    .header__nav .nav-button {
-        padding: 0.4rem 0.6rem; 
-        font-size: 12px;         
-        letter-spacing: 0.5px;   
-        border-radius: 6px;      
-        flex-shrink: 1;          
-    }
-
-    .main-content {
-        padding: 1rem;
-    }
-
-    .main-content__title {
-        font-size: var(--size-p);
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr; 
-        gap: 0.75rem; 
-    }
-    
-    .portfolio-item {
-        height: 140px; 
-        border-radius: 8px;
-    }
-
-    .footer {
-        padding: 1rem;
-        font-size: 14px;
-    }
->>>>>>> 3aefa5f81e905b3424a8d251c0f130478b874954
 }

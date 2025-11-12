@@ -1,0 +1,211 @@
+/* --- Variables CSS (Las que me has pasado) --- */
+:root {
+    --color-fondo-body: rgb(165, 165, 225);
+    --color-fondo-columna: rgb(255, 255, 255);
+    --color-fondo-titulo: rgb(220, 215, 240);
+    --color-fondo-tarjeta-hover: rgb(248, 248, 248);
+    --color-boton-add: rgb(80, 80, 235);
+    --color-boton-add-hover: rgb(60, 60, 200);
+    --sombra-tarjeta: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo-body); /* Usa tu variable */
+    font-family: Arial, sans-serif;
+    padding: 24px;
+}
+
+/* --- Título "Kanban" (Centrado) --- */
+.main-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+
+    /* --- CAMBIO PARA CENTRAR --- */
+    /* Ancho máximo para alinearse con el tablero */
+    max-width: 940px; 
+    /* Centra el bloque del título */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Contenedor Principal (Centrado) --- */
+#div-padre {
+    display: flex;
+    gap: 16px; 
+
+    /* --- CAMBIO PARA CENTRAR --- */
+    /* Quita el margen izquierdo */
+    /* margin-left: 60px; */ 
+    /* Centra las columnas (flex items) */
+    justify-content: center;
+}
+
+/* --- Columnas Kanban --- */
+.columna-kanban {
+    width: 30%;
+    max-width: 300px; 
+    background-color: var(--color-fondo-columna); /* Usa tu variable */
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgb(210, 210, 210); /* Borde de la imagen */
+    box-shadow: var(--sombra-tarjeta); /* Usa tu variable */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* --- Títulos de Columna --- */
+.div-secciones-t {
+    background-color: var(--color-fondo-titulo); /* Usa tu variable */
+    padding: 12px;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- Tarjetas --- */
+.div-secciones {
+    padding: 12px;
+    border: 1px solid rgb(200, 200, 200); /* Borde de la imagen */
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: var(--sombra-tarjeta); /* Usa tu variable */
+    position: relative;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    word-wrap: break-word;
+}
+
+.div-secciones:hover {
+    background-color: var(--color-fondo-titulo);
+}
+
+.texto-tarjeta {
+    transition: padding-right 0.3s ease;
+    padding-right: 25px; 
+}
+
+.div-secciones:hover .texto-tarjeta {
+    padding-right: 30px;
+
+}
+
+
+/* --- Botón Eliminar (tu icon-x) --- */
+.icon-x {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+    opacity: 0;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.div-secciones:hover .icon-x {
+    opacity: 1;
+}
+
+.icon-x:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* --- Botón de texto "+ Añade una tarjeta" --- */
+.add-card-trigger {
+    background: none;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: #555;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    margin-top: auto; 
+}
+
+.add-card-trigger:hover {
+    background-color: #ddd;
+}
+
+
+/* --- Estilos para el formulario de añadir tarjeta --- */
+.add-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+#form-card {
+    padding: 4px;
+}
+
+.textarea-tarjeta {
+    width: 100%;
+    height: 60px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    padding: 4px;
+}
+
+.form-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Botón Añadir Tarjeta (Azul) --- */
+.button-tarjeta {
+    color: white;
+    background-color: var(--color-boton-add); /* Usa tu variable */
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    width: auto;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-tarjeta:hover {
+    background-color: var(--color-boton-add-hover); /* Usa tu variable */
+}
+
+/* --- Icono 'X' del formulario --- */
+.icon-x-t {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+    padding: 0 4px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.icon-x-t:hover {
+    color: #000;
+}

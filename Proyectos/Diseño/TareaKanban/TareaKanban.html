@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea3 - Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-title">Kanban</h1>
+
+    <div id="div-padre">
+
+        <div id="div-padre-izq" class="columna-kanban">
+            <div class="div-secciones-t">Todo</div>
+            
+            <div class="div-secciones">
+                <p class="texto-tarjeta">Terminar la tarea 2 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sequi cumque nihil beatae provident...</p>
+                <button class="icon-x">&times;</button>
+            </div>
+            
+            <div class="div-secciones">
+                <p class="texto-tarjeta">Terminar la tarea 3 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="icon-x">&times;</button>
+            </div>
+            
+            <div class="div-secciones">
+                <p class="texto-tarjeta">Terminar la tarea 2 de diseño</p>
+                <button class="icon-x">&times;</button>
+            </div>
+            
+            <div class="div-secciones">
+                <p class="texto-tarjeta">Terminar la tarea 1 de servidor. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="icon-x">&times;</button>
+            </div>
+
+            <div class="add-card-form">
+                <div class="div-secciones" id="form-card">
+                    <textarea class="textarea-tarjeta" placeholder="Introduce un titulo"></textarea>
+                </div>
+                <div class="form-controls">
+                    <button class="button-tarjeta">Añadir tarjeta</button>
+                    <button class="icon-x-t">&times;</button>
+                </div>
+            </div>
+            
+            </div>
+
+        <div id="div-padre-medio" class="columna-kanban">
+            <div class="div-secciones-t">Doing</div>
+
+            <div class="div-secciones">
+                <p class="texto-tarjeta">Terminar la tarea 1 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dicta ullam unde! Quasi eos magnam debitis impedit? Cupiditate asperiore.</p>
+                <button class="icon-x">&times;</button>
+            </div>
+            
+            <button class="add-card-trigger">+ Añade una tarjeta</button>
+        </div>
+
+        <div id="div-padre-derecha" class="columna-kanban">
+            <div class="div-secciones-t">Done</div>
+            
+            <button class="add-card-trigger">+ Añade una tarjeta</button>
+        </div>
+    </div>
+</body>
+</html>

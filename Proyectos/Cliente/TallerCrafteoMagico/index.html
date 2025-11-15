@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Crafteo Magico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="main-title">Taller de Crafteo Magico</h1>
+    <main>
+        <div id="div-container">
+            
+            <div id="div-izq">
+                <h2 id="div-title-container">INVENTARIO</h2>
+                <section id="container-article">
+                    <article id="ing-1" class="ingredient" draggable="true" data-type="madera">Madera</article>
+                    <article id="ing-2" class="ingredient" draggable="true" data-type="metal">Hierro</article>
+                    <article id="ing-3" class="ingredient" draggable="true" data-type="polvora">Pólvora</article>
+                    <article id="ing-4" class="ingredient" draggable="true" data-type="metal">Oro</article>
+                </section>
+            </div>
+
+            <div id="div-cent">
+                <h2 id="div-title-container">LUGAR DE CREACION</h2>
+                <div id="station-carpintero" class="div-workspace" data-accepts="madera">
+                    <p>Banco de Carpintero</p>
+                    <span>(Acepta Madera)</span>
+                </div>
+                <div id="station-forja" class="div-workspace" data-accepts="metal">
+                    <p>La Forja</p>
+                    <span>(Acepta Metal)</span>
+                </div>
+                <div id="station-alquimia" class="div-workspace" data-accepts="polvora">
+                    <p>Mesa de Alquimia</p>
+                    <span>(Acepta Pólvora)</span>
+                </div>
+            </div>
+
+            <div id="div-der">
+                <h2 id="div-title-container">ALMACEN</h2>
+                <div class="product-item">
+                    <span>Flechas: </span>
+                    <span id="count-flechas">0</span>
+                </div>
+                <div class="product-item">
+                    <span>Lingotes de Acero: </span>
+                    <span id="count-acero">0</span>
+                </div>
+                <div class="product-item">
+                    <span>Bombas: </span>
+                    <span id="count-bombas">0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

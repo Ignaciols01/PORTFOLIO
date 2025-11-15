@@ -1,0 +1,164 @@
+/* --- CONFIGURACION GLOBAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    /* Fondo que simula una mesa de madera oscura */
+    background-color: #3E362E;
+    color: #F0F0F0; 
+    padding-top: 32px;
+}
+
+#main-title {
+    text-align: center;
+    margin-bottom: 48px;
+    color: #FFC107; 
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+#div-container {
+    width: 100%;
+    max-width: 1400px; 
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    text-align: center;
+}
+
+/* --- ESTILO DE COLUMNAS (Pergamino) --- */
+#div-izq,
+#div-cent,
+#div-der {
+    background-color: #FDF5E6; 
+    color: #4B382A; 
+    width: 30%;
+    min-height: 520px;
+    border-radius: 8px;
+
+    border: 3px solid #6D4C41;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    padding: 16px;
+}
+
+/* --- COLUMNA CENTRAL (ORGANIZACIÓN) --- */
+#div-cent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; 
+    padding-top: 16px;
+}
+
+#div-title-container {
+    margin: 12px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #795548;
+    color: #4B382A;
+    font-weight: bold;
+    font-size: 1.5em; 
+}
+
+/* --- ARTICULOS DE INVENTARIO (Ingredientes) --- */
+#container-article {
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+}
+
+#container-article article {
+    
+    background-color: #D2B48C;
+    color: #5D4037; 
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #A1887F;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+    cursor: grab;
+    user-select: none;
+    font-weight: bold;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+
+#container-article article:active {
+    cursor: grabbing;
+    background-color: #E9D8C0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
+}
+
+/* --- ESTACIONES DE TRABAJO --- */
+.div-workspace {
+    width: 90%;
+    background-color: #F5EFE6; 
+    color: #4B382A;
+    height: 110px; 
+    border: 2px dashed #A1887F; 
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.div-workspace p {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.div-workspace span {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #795548;
+}
+
+/* --- FEEDBACK VISUAL (Efecto Mágico) --- */
+
+.div-workspace.drag-over-valid {
+    background-color: #E0F2E9;
+    border-color: #4CAF50;
+    border-style: solid;
+    box-shadow: 0 0 12px 3px #4CAF50;
+}
+
+.div-workspace.drag-over-invalid {
+    background-color: #FFEBEE;
+    border-color: #E57373;
+    border-style: solid;
+    box-shadow: 0 0 12px 3px #E57373;
+}
+
+
+/* --- ITEMS DE ALMACEN --- */
+.product-item {
+    background-color: #F5EFE6;
+    border: 1px solid #D7C8B9;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 16px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.product-item span {
+    font-weight: bold;
+    color: #5D4037;
+}
+
+/* --- ARREGLO PARA DRAG & DROP --- */
+.div-workspace p,
+.div-workspace span {
+    pointer-events: none;
+}

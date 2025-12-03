@@ -151,6 +151,50 @@ body {
     font-size: 100px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
+
+.item-aventura {
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.aventura-buttons {
+    display: flex;
+    gap: 10px; 
+}
+
+/* 2. Estilo base del botón siguiendo tu guía */
+.btn-custom {
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    
+    background-color: var(--color-primario);
+    color: var(--color-negro);
+    border: 2px solid var(--color-primario);
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 3. Animación Hover */
+.btn-custom:hover {
+
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    border-color: var(--color-secundario);
+    
+
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
 /* ======================================= */
 
 .footer {

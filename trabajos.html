@@ -20,7 +20,7 @@
 
     <header id="main-header" class="bg-secundario/95 dark:bg-negro/95 dark:border-b dark:border-secundario backdrop-blur-md shadow-lg fixed top-0 w-full z-50 h-[80px] flex items-center transition-colors duration-500">
         <div class="w-full max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-8">
-            <a href="index.html" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
+            <a href="index.html" target="_blank" rel="noopener noreferrer" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
                 <img src="img/logo/logo.png" alt="Logotipo" class="h-10 w-auto brightness-0 invert group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">
             </a>
             
@@ -35,9 +35,9 @@
             </div>
             
             <nav id="menu" class="hidden fixed inset-0 bg-negro/98 backdrop-blur-2xl flex-col items-center justify-center gap-12 md:static md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:gap-10 transition-all duration-500 z-40">
-                <a href="index.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Inicio</a>
-                <a href="trabajos.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white dark:after:bg-secundario transition-colors hover:scale-110 md:hover:scale-100">Trabajos</a>
-                <a href="categorias.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Categorías</a>
+                <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Inicio</a>
+                <a href="trabajos.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white dark:after:bg-secundario transition-colors hover:scale-110 md:hover:scale-100">Trabajos</a>
+                <a href="categorias.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Categorías</a>
             </nav>
         </div>
     </header>
@@ -49,99 +49,139 @@
             <p class="text-acento dark:text-zinc-400 font-medium text-lg md:text-xl max-w-2xl transition-colors duration-500">Explora los proyectos que he desarrollado y subido a mi repositorio.</p>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-14">
-            
-            <!-- Taller Mágico -->
-            <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
-                <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
-                    <a href="Proyectos/Cliente/TallerCrafteoMagico/index.html" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105">Lanzar Proyecto</a>
-                    <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Cliente/TallerCrafteoMagico" target="_blank" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10">Ver Código</a>
-                </div>
-                <div class="h-72 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
-                    <img src="img/img-tarea/TallerMagico.png" alt="Taller Mágico" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-[1.5s] ease-out relative z-0" onerror="this.style.display='none'">
-                </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-black leading-tight">Taller Crafteo Mágico</h3>
-                        <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Cliente</span>
-                    </div>
-                    <p class="text-acento dark:text-zinc-400 font-medium line-clamp-2">Desarrollo web completo enfocado en una experiencia inmersiva para el usuario.</p>
-                </div>
-            </article>
+        <!-- Sección: Desarrollo Cliente -->
+        <section id="desarrollo-cliente" class="mb-20 pt-10 reveal">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-3xl font-bold text-negro dark:text-white">Desarrollo Cliente</h2>
+                <div class="h-1 flex-grow bg-secundario rounded-full opacity-20"></div>
+            </div>
 
-            <!-- Aventura JS -->
-            <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
-                <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
-                    <a href="Proyectos/Cliente/AventuraJS/Aventura-en-el-Reino-JS-main/index.html" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105">Lanzar Proyecto</a>
-                    <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Cliente/AventuraJS" target="_blank" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10">Ver Código</a>
-                </div>
-                <div class="h-72 w-full bg-acento dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
-                    <h4 class="text-white dark:text-zinc-500 font-black text-4xl tracking-widest uppercase group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-20 text-center">Aventura JS</h4>
-                </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-black leading-tight">Aventura JS</h3>
-                        <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Cliente</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-10">
+                
+                <!-- Taller Mágico -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="Proyectos/Cliente/TallerCrafteoMagico/index.html" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Cliente/TallerCrafteoMagico" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
                     </div>
-                    <p class="text-acento dark:text-zinc-400 font-medium line-clamp-2">Lógica compleja y manipulación del DOM mediante JavaScript Vanilla.</p>
-                </div>
-            </article>
-
-            <!-- Figma -->
-            <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
-                <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
-                    <a href="https://ignaciols01.github.io/PORTFOLIO/" target="_blank" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105">Lanzar Proyecto</a>
-                    <a href="https://github.com/ignaciols01/portfolio" target="_blank" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10">Ver Código</a>
-                </div>
-                <div class="h-72 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-12 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
-                    <img src="img/img-main/figma logo.png" alt="Figma" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-[1.5s] ease-out" onerror="this.style.display='none'">
-                </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-black leading-tight">Diseño UI</h3>
-                        <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                    <div class="h-64 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <div class="absolute inset-0 bg-secundario/5 group-hover:bg-secundario/0 transition-colors duration-700"></div>
+                        <img src="img/img-tarea/TallerMagico.png" alt="Taller Mágico" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-[1.5s] ease-out relative z-0" onerror="this.style.display='none'">
                     </div>
-                    <p class="text-acento dark:text-zinc-400 font-medium line-clamp-2">Prototipado de alta fidelidad y diseño de interfaces en Figma.</p>
-                </div>
-            </article>
-
-            <!-- Kanban -->
-            <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
-                <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
-                    <a href="Proyectos/TareaKanban/TareaKanban.html" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105">Lanzar Proyecto</a>
-                    <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/TareaKanban" target="_blank" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10">Ver Código</a>
-                </div>
-                <div class="h-72 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
-                    <img src="img/img-tarea/tareakanban.svg" alt="Kanban" class="w-full h-full object-contain shadow-md rounded group-hover:scale-110 transition-transform duration-[1.5s] ease-out" onerror="this.style.display='none'">
-                </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-black leading-tight">Kanban Board</h3>
-                        <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Cliente</span>
+                            <h3 class="text-xl font-black leading-tight">Taller Crafteo Mágico</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Desarrollo web completo enfocado en una experiencia inmersiva para el usuario.</p>
                     </div>
-                    <p class="text-acento dark:text-zinc-400 font-medium line-clamp-2">Maquetación visual utilizando HTML semántico y CSS3 estructurado.</p>
-                </div>
-            </article>
+                </article>
 
-            <!-- Animaciones CSS -->
-            <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
-                <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
-                    <a href="Proyectos/Diseño/TareaAnimacion/index.html" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105">Lanzar Proyecto</a>
-                    <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Dise%C3%B1o/TareaAnimacion" target="_blank" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10">Ver Código</a>
-                </div>
-                <div class="h-72 w-full bg-negro dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
-                    <h4 class="text-white dark:text-zinc-500 font-black text-3xl tracking-widest uppercase group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-20 text-center">CSS Keyframes</h4>
-                </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-black leading-tight">Animación Interactiva</h3>
-                        <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                <!-- Aventura JS -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="Proyectos/Cliente/AventuraJS/Aventura-en-el-Reino-JS-main/index.html" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Cliente/AventuraJS" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
                     </div>
-                    <p class="text-acento dark:text-zinc-400 font-medium line-clamp-2">Exploración de animaciones avanzadas, transiciones y keyframes puros.</p>
-                </div>
-            </article>
+                    <div class="h-64 w-full bg-acento dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <h4 class="text-white dark:text-zinc-500 font-black text-2xl tracking-widest uppercase group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-20 text-center">Aventura JS</h4>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Cliente</span>
+                            <h3 class="text-xl font-black leading-tight">Aventura JS</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Lógica compleja y manipulación del DOM mediante JavaScript Vanilla.</p>
+                    </div>
+                </article>
 
-        </div>
+                <!-- Reloj del Juicio Final -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="https://ignaciols01.github.io/Reloj_Juicio_Final/" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/Ignaciols01/Reloj_Juicio_Final" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
+                    </div>
+                    <div class="h-64 w-full bg-negro dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <h4 class="text-white dark:text-zinc-500 font-black text-2xl tracking-widest uppercase group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-20 text-center">Juicio Final</h4>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Cliente</span>
+                            <h3 class="text-xl font-black leading-tight">Reloj del Juicio Final</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Temporizador interactivo con lógica de JavaScript Vanilla para medir tiempos de reacción exactos.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección: Diseño & Frontend -->
+        <section id="diseno" class="mb-20 pt-10 reveal">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-3xl font-bold text-negro dark:text-white">Diseño & Frontend</h2>
+                <div class="h-1 flex-grow bg-acento rounded-full opacity-20"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-10">
+
+                <!-- Figma -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="https://ignaciols01.github.io/PORTFOLIO/" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/ignaciols01/portfolio" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
+                    </div>
+                    <div class="h-64 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-12 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <img src="img/img-main/figma logo.png" alt="Figma" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-[1.5s] ease-out" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                            <h3 class="text-xl font-black leading-tight">Diseño UI</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Prototipado de alta fidelidad y diseño de interfaces web en Figma.</p>
+                    </div>
+                </article>
+
+                <!-- Kanban -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="Proyectos/TareaKanban/TareaKanban.html" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/TareaKanban" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
+                    </div>
+                    <div class="h-64 w-full bg-primario dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <img src="img/img-tarea/tareakanban.svg" alt="Kanban" class="w-full h-full object-contain shadow-md rounded group-hover:scale-110 transition-transform duration-[1.5s] ease-out" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                            <h3 class="text-xl font-black leading-tight">Kanban Board</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Maquetación visual de paneles utilizando HTML semántico y CSS3 estructurado.</p>
+                    </div>
+                </article>
+
+                <!-- Animaciones CSS -->
+                <article class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(220,36,56,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 flex flex-col group relative border border-black/5 dark:border-white/5 reveal">
+                    <div class="absolute inset-0 bg-negro/85 dark:bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 z-10">
+                        <a href="Proyectos/Diseño/TareaAnimacion/index.html" target="_blank" rel="noopener noreferrer" class="bg-secundario text-white px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(220,36,56,0.6)] transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-105 text-center">Lanzar Proyecto</a>
+                        <a href="https://github.com/ignaciols01/portfolio/tree/main/Proyectos/Dise%C3%B1o/TareaAnimacion" target="_blank" rel="noopener noreferrer" class="bg-white text-negro px-10 py-4 rounded-full font-bold transform translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] delay-100 hover:scale-105 border border-black/10 flex items-center gap-2 justify-center">Ver Código</a>
+                    </div>
+                    <div class="h-64 w-full bg-acento dark:bg-zinc-800 flex items-center justify-center p-8 overflow-hidden relative border-b border-negro/5 dark:border-white/5">
+                        <h4 class="text-white dark:text-zinc-500 font-black text-2xl tracking-widest uppercase group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-20 text-center">CSS Keyframes</h4>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-col items-start mb-4 gap-2">
+                            <span class="text-xs uppercase tracking-widest font-bold text-secundario bg-secundario/10 dark:bg-secundario/20 px-3 py-1 rounded-md">Diseño</span>
+                            <h3 class="text-xl font-black leading-tight">Animación Interactiva</h3>
+                        </div>
+                        <p class="text-sm text-acento dark:text-zinc-400 font-medium line-clamp-3">Exploración de animaciones avanzadas, transiciones y keyframes puros.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-negro dark:bg-black text-primario py-12 text-center border-t-4 border-secundario transition-colors duration-500">
@@ -178,11 +218,11 @@
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
                 document.body.classList.remove('overflow-hidden');
                 header.classList.remove('bg-negro/95');
-                header.classList.add('bg-secundario/95');
+                header.classList.add('bg-secundario/95', 'dark:bg-negro/95');
             } else {
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
                 document.body.classList.add('overflow-hidden');
-                header.classList.remove('bg-secundario/95');
+                header.classList.remove('bg-secundario/95', 'dark:bg-negro/95');
                 header.classList.add('bg-negro/95');
             }
         });
@@ -199,7 +239,7 @@
 
             document.querySelectorAll('.reveal').forEach((el, index) => {
                 el.classList.add('opacity-0', 'translate-y-12', 'scale-95', 'transition-all', 'duration-[800ms]', 'ease-[cubic-bezier(0.25,0.8,0.25,1)]');
-                el.style.transitionDelay = `${(index % 2) * 150}ms`;
+                el.style.transitionDelay = `${(index % 3) * 150}ms`;
                 observer.observe(el);
             });
         });

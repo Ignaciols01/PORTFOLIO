@@ -6,7 +6,6 @@
     <title>Ignacio | Desarrollador Web</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-      /* Forzar variante dark por clase para Tailwind v4 */
       @custom-variant dark (&:is(.dark *));
       @theme {
         --color-primario: #FAFAFA;
@@ -29,24 +28,18 @@
 </head>
 <body class="bg-primario dark:bg-negro text-negro dark:text-primario min-h-screen flex flex-col antialiased selection:bg-secundario selection:text-white transition-colors duration-500">
 
-    <!-- Header (Rojo en claro, Oscuro con borde en oscuro) -->
     <header id="main-header" class="bg-secundario/95 dark:bg-negro/95 dark:border-b dark:border-secundario backdrop-blur-md shadow-lg fixed top-0 w-full z-50 h-[80px] flex items-center transition-colors duration-500">
         <div class="w-full max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-8">
-            <!-- Logo -->
-            <a href="index.html" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
+            <a href="index.html" target="_blank" rel="noopener noreferrer" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
                 <img src="img/logo/logo.png" alt="Logotipo" class="h-10 w-auto brightness-0 invert group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">
             </a>
             
             <div class="flex items-center gap-4 z-50">
-                <!-- Botón Modo Claro/Oscuro -->
                 <button id="theme-toggle" class="text-white hover:scale-110 transition-transform p-2 cursor-pointer focus:outline-none" title="Cambiar tema">
-                    <!-- Icono Luna (Modo Claro) -->
                     <svg id="icon-moon" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    <!-- Icono Sol (Modo Oscuro) -->
                     <svg id="icon-sun" class="w-6 h-6 hidden dark:block text-secundario" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </button>
 
-                <!-- Botón Menú Hamburguesa (Móvil) -->
                 <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2 cursor-pointer transition-transform hover:scale-110">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -54,19 +47,16 @@
                 </button>
             </div>
             
-            <!-- Navegación -->
             <nav id="menu" class="hidden absolute top-0 left-0 w-full h-screen bg-negro/98 backdrop-blur-2xl flex-col items-center justify-center gap-12 md:static md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:gap-10 transition-all duration-500 z-40">
-                <a href="index.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white transition-colors hover:text-white hover:scale-110 md:hover:scale-100">Inicio</a>
-                <a href="trabajos.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Trabajos</a>
-                <a href="categorias.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Categorías</a>
+                <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white transition-colors hover:text-white hover:scale-110 md:hover:scale-100">Inicio</a>
+                <a href="trabajos.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Trabajos</a>
+                <a href="categorias.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Categorías</a>
             </nav>
         </div>
     </header>
 
     <main class="flex-grow w-full">
-        <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
-            <!-- Círculos de fondo -->
             <div class="absolute top-20 left-10 w-72 h-72 bg-secundario/10 dark:bg-secundario/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 transition-colors duration-500"></div>
             <div class="absolute top-40 right-10 w-72 h-72 bg-negro/5 dark:bg-white/5 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 transition-colors duration-500"></div>
             
@@ -79,11 +69,11 @@
                     Hola, soy <strong class="text-negro dark:text-white">Ignacio</strong>. Desarrollador web enfocado en crear interfaces limpias, funcionales y experiencias de usuario excepcionales.
                 </p>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <a href="trabajos.html" class="px-10 py-4 bg-secundario text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-[0_10px_30px_rgba(220,36,56,0.3)] transition-all duration-300 flex items-center justify-center gap-2 w-full md:w-auto">
+                    <a href="trabajos.html" target="_blank" rel="noopener noreferrer" class="px-10 py-4 bg-secundario text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-[0_10px_30px_rgba(220,36,56,0.3)] transition-all duration-300 flex items-center justify-center gap-2 w-full md:w-auto">
                         Ver Mis Trabajos
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
-                    <a href="https://github.com/ignaciols01/portfolio" target="_blank" class="px-10 py-4 bg-white dark:bg-zinc-800 text-negro dark:text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 border border-black/5 dark:border-white/10 flex items-center justify-center gap-3 w-full md:w-auto">
+                    <a href="https://github.com/ignaciols01/portfolio" target="_blank" rel="noopener noreferrer" class="px-10 py-4 bg-white dark:bg-zinc-800 text-negro dark:text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300 border border-black/5 dark:border-white/10 flex items-center justify-center gap-3 w-full md:w-auto">
                         Perfil de GitHub
                     </a>
                 </div>
@@ -96,16 +86,13 @@
     </footer>
 
     <script>
-        // Lógica de Modo Claro / Oscuro
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
 
-        // Comprobar la preferencia guardada o la del sistema
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             htmlElement.classList.add('dark');
         }
 
-        // Cambiar tema al hacer click
         themeToggleBtn.addEventListener('click', () => {
             htmlElement.classList.toggle('dark');
             if (htmlElement.classList.contains('dark')) {
@@ -115,10 +102,10 @@
             }
         });
 
-        // Menú Móvil
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         const menuIcon = document.getElementById('menu-icon');
+        const header = document.getElementById('main-header');
 
         menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -126,13 +113,16 @@
             if (menu.classList.contains('hidden')) {
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
                 document.body.classList.remove('overflow-hidden');
+                header.classList.remove('bg-negro/95');
+                header.classList.add('bg-secundario/95');
             } else {
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
                 document.body.classList.add('overflow-hidden');
+                header.classList.remove('bg-secundario/95');
+                header.classList.add('bg-negro/95');
             }
         });
 
-        // Animación Reveal Escalonada
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

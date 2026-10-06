@@ -20,7 +20,7 @@
 
     <header id="main-header" class="bg-secundario/95 dark:bg-negro/95 dark:border-b dark:border-secundario backdrop-blur-md shadow-lg fixed top-0 w-full z-50 h-[80px] flex items-center transition-colors duration-500">
         <div class="w-full max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-8">
-            <a href="index.html" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
+            <a href="index.html" target="_blank" rel="noopener noreferrer" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
                 <img src="img/logo/logo.png" alt="Logotipo" class="h-10 w-auto brightness-0 invert group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">
             </a>
             
@@ -35,9 +35,9 @@
             </div>
             
             <nav id="menu" class="hidden fixed inset-0 bg-negro/98 backdrop-blur-2xl flex-col items-center justify-center gap-12 md:static md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:gap-10 transition-all duration-500 z-40">
-                <a href="index.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Inicio</a>
-                <a href="trabajos.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Trabajos</a>
-                <a href="categorias.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white dark:after:bg-secundario transition-colors hover:scale-110 md:hover:scale-100">Categorías</a>
+                <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Inicio</a>
+                <a href="trabajos.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Trabajos</a>
+                <a href="categorias.html" target="_blank" rel="noopener noreferrer" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white dark:after:bg-secundario transition-colors hover:scale-110 md:hover:scale-100">Categorías</a>
             </nav>
         </div>
     </header>
@@ -51,8 +51,7 @@
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal max-w-5xl mx-auto">
             
-            <!-- Categoría Cliente -->
-            <a href="trabajos.html" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(220,36,56,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
+            <a href="trabajos.html#desarrollo-cliente" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(220,36,56,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
                 <div class="absolute inset-0 bg-secundario opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
                 <div class="w-24 h-24 bg-secundario/10 dark:bg-secundario/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     <svg class="w-12 h-12 text-secundario" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
@@ -62,15 +61,14 @@
                 <span class="mt-8 text-secundario font-bold uppercase tracking-widest text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Explorar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
             </a>
 
-            <!-- Categoría Diseño -->
-            <a href="trabajos.html" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(220,36,56,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
-                <div class="absolute inset-0 bg-secundario opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
+            <a href="trabajos.html#diseno" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(24,24,27,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
+                <div class="absolute inset-0 bg-negro opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
                 <div class="w-24 h-24 bg-negro/10 dark:bg-white/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
                     <svg class="w-12 h-12 text-negro dark:text-primario transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 </div>
                 <h3 class="text-3xl font-black mb-4 text-negro dark:text-primario">Diseño & Frontend</h3>
                 <p class="text-base text-acento dark:text-zinc-400 font-medium max-w-sm">Prototipado UI en Figma, maquetación semántica y diseño de animaciones CSS fluidas.</p>
-                <span class="mt-8 text-secundario font-bold uppercase tracking-widest text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Explorar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+                <span class="mt-8 text-negro dark:text-primario font-bold uppercase tracking-widest text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Explorar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
             </a>
 
         </section>
@@ -137,4 +135,4 @@
         });
     </script>
 </body>
-</html>
+</html> 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías | Ignacio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+      @theme {
+        --color-primario: #FAFAFA;
+        --color-secundario: #DC2438;
+        --color-acento: #71717A; 
+        --color-negro: #18181B; 
+      }
+      body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+</head>
+<body class="bg-primario dark:bg-negro text-negro dark:text-primario min-h-screen flex flex-col antialiased transition-colors duration-500">
+
+    <header id="main-header" class="bg-secundario/95 dark:bg-negro/95 dark:border-b dark:border-secundario backdrop-blur-md shadow-lg fixed top-0 w-full z-50 h-[80px] flex items-center transition-colors duration-500">
+        <div class="w-full max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-8">
+            <a href="index.html" class="transition-transform duration-500 hover:scale-110 z-50 relative group">
+                <img src="img/logo/logo.png" alt="Logotipo" class="h-10 w-auto brightness-0 invert group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">
+            </a>
+            
+            <div class="flex items-center gap-4 z-50">
+                <button id="theme-toggle" class="text-white hover:scale-110 transition-transform p-2 cursor-pointer focus:outline-none" title="Cambiar tema">
+                    <svg id="icon-moon" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <svg id="icon-sun" class="w-6 h-6 hidden dark:block text-secundario" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </button>
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2 cursor-pointer transition-transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+            
+            <nav id="menu" class="hidden fixed inset-0 bg-negro/98 backdrop-blur-2xl flex-col items-center justify-center gap-12 md:static md:h-auto md:w-auto md:bg-transparent md:flex md:flex-row md:gap-10 transition-all duration-500 z-40">
+                <a href="index.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Inicio</a>
+                <a href="trabajos.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white/70 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white dark:after:bg-secundario hover:after:w-full transition-all duration-300 hover:scale-110 md:hover:scale-100">Trabajos</a>
+                <a href="categorias.html" class="text-3xl md:text-sm font-bold tracking-[2px] uppercase relative py-2 text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white dark:after:bg-secundario transition-colors hover:scale-110 md:hover:scale-100">Categorías</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-8 pb-20 pt-16">
+        
+        <section class="text-center pt-8 pb-16 reveal">
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tight">Mis <span class="text-secundario">Especialidades</span></h1>
+            <p class="text-acento dark:text-zinc-400 font-medium text-lg md:text-xl max-w-2xl mx-auto transition-colors duration-500">Áreas técnicas donde desarrollo mi potencial.</p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal max-w-5xl mx-auto">
+            
+            <!-- Categoría Cliente -->
+            <a href="trabajos.html" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(220,36,56,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
+                <div class="absolute inset-0 bg-secundario opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
+                <div class="w-24 h-24 bg-secundario/10 dark:bg-secundario/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <svg class="w-12 h-12 text-secundario" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-3xl font-black mb-4 text-negro dark:text-primario">Desarrollo Cliente</h3>
+                <p class="text-base text-acento dark:text-zinc-400 font-medium max-w-sm">Lógica frontend, JavaScript Vanilla y creación de mecánicas web dinámicas e interactivas.</p>
+                <span class="mt-8 text-secundario font-bold uppercase tracking-widest text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Explorar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+            <!-- Categoría Diseño -->
+            <a href="trabajos.html" class="group bg-white dark:bg-zinc-900 rounded-[2.5rem] p-12 text-center shadow-sm hover:shadow-[0_30px_60px_rgba(220,36,56,0.15)] transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-4 border border-black/5 dark:border-white/5 flex flex-col items-center justify-center min-h-[350px] relative overflow-hidden">
+                <div class="absolute inset-0 bg-secundario opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
+                <div class="w-24 h-24 bg-negro/10 dark:bg-white/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                    <svg class="w-12 h-12 text-negro dark:text-primario transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-3xl font-black mb-4 text-negro dark:text-primario">Diseño & Frontend</h3>
+                <p class="text-base text-acento dark:text-zinc-400 font-medium max-w-sm">Prototipado UI en Figma, maquetación semántica y diseño de animaciones CSS fluidas.</p>
+                <span class="mt-8 text-secundario font-bold uppercase tracking-widest text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Explorar <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+        </section>
+    </main>
+
+    <footer class="bg-negro dark:bg-black text-primario py-12 text-center mt-auto border-t-4 border-secundario transition-colors duration-500">
+        <p class="text-xs md:text-sm tracking-[3px] font-semibold uppercase opacity-60 hover:opacity-100 transition-opacity">&copy; 2026 Ignacio. Código diseñado con precisión.</p>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const header = document.getElementById('main-header');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            
+            if (menu.classList.contains('hidden')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.classList.remove('overflow-hidden');
+                header.classList.remove('bg-negro/95');
+                header.classList.add('bg-secundario/95', 'dark:bg-negro/95');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                document.body.classList.add('overflow-hidden');
+                header.classList.remove('bg-secundario/95', 'dark:bg-negro/95');
+                header.classList.add('bg-negro/95');
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-12', 'scale-95');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach((el, index) => {
+                el.classList.add('opacity-0', 'translate-y-12', 'scale-95', 'transition-all', 'duration-[800ms]', 'ease-[cubic-bezier(0.25,0.8,0.25,1)]');
+                el.style.transitionDelay = `${(index % 2) * 150}ms`;
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

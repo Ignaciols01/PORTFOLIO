@@ -1,0 +1,441 @@
+/* =========================================
+   1. CONFIGURACIÓN BASE
+   ========================================= */
+:root {
+    --bg: #1b1b1b;
+    --bg-head: #2d2d2d;
+    --bg-item: #333333;
+    --borde: #4a4a4a;
+    --txt: #ffffff;
+    --txt-gris: #b0b0b0;
+    --accent: #e4ae39;
+    --red: #d32f2f;
+    --green: #4caf50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    overflow-y: hidden;
+}
+
+@media (max-height: 600px) {
+    body { overflow-y: auto; }
+}
+
+#game-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   2. SISTEMA DE ESCENAS
+   ========================================= */
+.escena {
+    display: none;
+    width: 100%;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.escena.activa {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   3. TARJETA PRINCIPAL
+   ========================================= */
+.tarjeta {
+    width: 100%;
+    border: 2px solid var(--borde);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+}
+
+.cabecera {
+    background-color: var(--bg-head);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 3px solid var(--accent);
+}
+
+.contenido {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+/* =========================================
+   4. ELEMENTOS VISUALES (TEXTOS E IMÁGENES)
+   ========================================= */
+.titulo {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid var(--borde);
+    background-color: var(--accent);
+    transition: box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    box-shadow: 1px 1px 15px var(--accent);
+}
+
+.saldo {
+    background: #000;
+    color: var(--accent);
+    padding: 4px 10px;
+    font-family: monospace;
+    font-size: 1rem;
+    border: 1px solid var(--borde);
+}
+
+.texto-verde { color: var(--green); }
+.texto-acento { color: var(--accent); }
+
+/* =========================================
+   5. GRID Y SCROLL
+   ========================================= */
+.scroll-box {
+    width: 100%;
+    height: 45vh;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--borde);
+    margin-bottom: 10px;
+}
+
+.scroll-box::-webkit-scrollbar { width: 8px; }
+.scroll-box::-webkit-scrollbar-track { background: #111; }
+.scroll-box::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+.grid {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+.grid.cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    max-width: 550px;
+    justify-content: center;
+}
+
+.grid.cols-3 {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+/* =========================================
+   6. ITEMS (PRODUCTOS Y ENEMIGOS)
+   ========================================= */
+.item {
+    background-color: var(--bg-item);
+    border: 1px solid var(--borde);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    color: var(--txt);
+    font-weight: bold;
+}
+
+.item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.item.seleccionado {
+    background-color: var(--accent);
+    border-color: #fff;
+    transform: scale(0.98);
+}
+
+.item.seleccionado * { color: #000 !important; }
+
+.item.jefe {
+    border: 2px solid var(--red);
+    background: #3a1515;
+}
+
+.item-img {
+    background-color: #444;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--borde);
+    position: relative;
+}
+
+.item-img img {
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform 0.3s;
+}
+
+.item:hover .item-img img { transform: scale(1.1); }
+
+.item h3 { font-size: 0.8rem; color: var(--txt); margin: 5px 0; text-transform: uppercase; }
+.desc { font-size: 0.7rem; color: var(--txt-gris); margin-bottom: 3px; display: block; }
+.precio { color: var(--accent); font-weight: 800; font-size: 1rem; margin-bottom: 5px; }
+
+/* =========================================
+   7. BOTONES
+   ========================================= */
+.boton {
+    background-color: var(--accent);
+    color: #1b1b1b;
+    border: 2px solid var(--accent);
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--accent);
+    box-shadow: 0 0 15px rgba(228, 174, 57, 0.3);
+    transform: translateY(-2px);
+}
+
+.boton-peque {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 4px 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    margin-top: auto;
+}
+
+.boton-peque:hover { background: var(--accent); color: #000; }
+
+.item.seleccionado .boton-peque {
+    background-color: var(--red);
+    color: white;
+    border-color: #b71c1c;
+}
+
+/* =========================================
+   8. INVENTARIO
+   ========================================= */
+.inventario {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.slot {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-item);
+    border: 2px solid var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.slot.vacio { border-color: #555; opacity: 0.5; }
+.slot img { max-width: 80%; max-height: 80%; object-fit: contain; }
+
+/* =========================================
+   9. BATALLA
+   ========================================= */
+.arena {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    min-height: 120px;
+}
+
+.vs {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--red);
+    font-style: italic;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.anim-entrada { animation: slide 1s ease forwards; }
+
+@keyframes slide {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.feedback-icon {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2rem; color: #fff; opacity: 0; pointer-events: none; z-index: 10;
+}
+
+.animate-added .feedback-icon { animation: popIcon 1s ease-out forwards; }
+
+@keyframes popIcon {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+    100% { transform: translate(-50%, -100%) scale(1); opacity: 0; }
+}
+
+
+
+/* === ANIMACIONES DE BATALLA === */
+
+/* Clase para el Jugador (CT): Viene de la izquierda */
+.entrada-izquierda {
+    animation: moverDesdeIzquierda 0.8s ease-out forwards;
+}
+
+/* Clase para el Enemigo: Viene de la derecha */
+.entrada-derecha {
+    animation: moverDesdeDerecha 0.8s ease-out forwards;
+}
+
+/* Definición del movimiento Izquierda -> Centro */
+@keyframes moverDesdeIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px); /* Empieza desplazado a la izquierda */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Termina en su sitio */
+    }
+}
+
+/* Definición del movimiento Derecha -> Centro */
+@keyframes moverDesdeDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(150px); /* Empieza desplazado a la derecha */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Termina en su sitio */
+    }
+}
+
+
+
+/* =========================================
+   10. RESPONSIVIDAD (MEDIA QUERIES)
+   ========================================= */
+
+/* Tablets y pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+    .grid.cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* En batalla, ponemos al jugador arriba y enemigo abajo */
+    .arena {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px 0;
+    }
+    
+    /* Giramos el VS para que quede vertical */
+    .vs {
+        margin: 10px 0;
+        transform: rotate(90deg); 
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    
+    /* Todo a una sola columna */
+    .grid.cols-3, .grid.cols-2 {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Ajustamos la cabecera para que el avatar y título se centren */
+    .cabecera {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Botones más grandes para facilitar el toque */
+    .boton {
+        width: 100%; 
+        padding: 12px;
+    }
+
+    /* Ajuste del inventario para evitar que se desborde */
+    .inventario {
+        justify-content: flex-start;
+        overflow-x: auto; /* Permite scroll lateral solo en la barrita de items */
+        padding-bottom: 5px;
+    }
+    
+    .titulo {
+        font-size: 1.1rem;
+    }
+}
+
+/* CAMBIA ".item" POR EL NOMBRE QUE TÚ TENGAS */
+.item {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    /* Esto asegura que la animación sea suave */
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Sube 5 píxeles */
+    border-color: #ffffff; /* Cambia el borde a blanco al pasar el ratón */
+    cursor: pointer;
+}

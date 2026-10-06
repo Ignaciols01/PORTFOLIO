@@ -1,0 +1,152 @@
+/* VARIABLES Y RESET */
+:root {
+    --primary: #2ecc71;       /* Verde vibrante para tecnología/éxito */
+    --secondary: #27ae60;
+    --dark: #121212;          /* Fondo muy oscuro */
+    --card-bg: #1e1e1e;       /* Gris oscuro para tarjetas */
+    --text-main: #f4f4f4;
+    --text-muted: #aaaaaa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--dark);
+    color: var(--text-main);
+    overflow-x: hidden; /* Para evitar scroll lateral cuando las tarjetas entran desde fuera */
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle at center, #2a2a2a 0%, #000 100%);
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    opacity: 0;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    opacity: 0; 
+}
+
+.hero-visual {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, var(--primary), transparent);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    opacity: 0; 
+    box-shadow: 0 0 30px rgba(46, 204, 113, 0.2);
+}
+
+/* FEATURES SECTION */
+.features {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: left;
+    transform-style: preserve-3d; 
+    perspective: 1000px;
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* CTA SECTION */
+.cta-section {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    opacity: 0; /* Oculto inicialmente */
+}
+
+footer p {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .card { x: 0 !important; } 
+}
